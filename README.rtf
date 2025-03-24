@@ -1,0 +1,162 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red12\green12\blue12;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c5490\c5490\c5490;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww15500\viewh14180\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 README
+\f1\b0 \
+\
+This repository contains data and code used to reproduce the results and figures presented the manuscript: \
+\
+
+\f0\b Zoller L., V\'e1zquez D.P. & Resasco J. Phenological shifts in plants and pollinators over a \
+century disrupt interaction persistence.
+\f1\b0 \
+\
+
+\f0\b Abstract:
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+Mutualistic interactions between plants and pollinators play an important role in supporting biodiversity and ecosystem stability. However, these interactions are increasingly threatened by climate change, which can alter the phenology of species and cause temporal mismatches between interacting partners. Leveraging historical and contemporary datasets collected more than a century apart, we investigated phenological shifts in plants and pollinators and the impact of changes in temporal overlap of the interaction partners on the persistence of their interactions. We found that generally, the onset of flowering and insect activity started earlier and has lasted longer in the present. We also found that greater temporal overlap of plant and pollinator species predicted a higher probability of persistence of their interaction between time periods. Our results document phenological shifts over a century, and emphasize the importance of maintaining phenological matching for the persistence of\'a0 plant-pollinator interactions. This illustrates the value of historical data sets for understanding long-term ecological dynamics in the face of accelerating environmental change.\cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa213\partightenfactor0
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+Author Contribution Statement
+\f1\b0 : LZ, JR and DV conceived the ideas. JR led the data collection. LZ led the formal analysis and visualization of the data. \
+
+\f0\b Corresponding author: 
+\f1\b0 Leana Zoller (Leana.zoller@colorado.edu)
+\f2 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\f1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Contents:
+\f1\b0 \
+The repository contains the following files:\
+\
+
+\f0\b Data:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 \
+1. Data_eleSubset_PollSubset_R.csv\
+\
+This dataset contains 
+\f0\b pollinator
+\f1\b0  observations made in two time periods on Pikes Peak that meet the following criteria:\
+- Observed pollinator was identified to species level\
+- Pollinator species was observed in both the past and present\
+- At least 3 individuals of the pollinator species were observed in each time period\
+- In the present, the pollinator was observed between 2300 and 2900 meters of elevation\
+\
+\
+Variables:\
+Poll_spec: The species name of the observed pollinator species \
+Poll_order: The name of the order the observed pollinator species belongs to\
+Julian_day: The Julian day (day of the year) that the pollinator was observed\
+Plant_spec: The species name of the plant the pollinator was observed on\
+Freq: The frequency of the observed plant-pollinator interaction\
+Period: The time period where an observation was made (2 levels: \'93Past\'94 and \'93Present\'94)\
+\
+2. Data_eleSubset_PlantSubset_R.csv\
+\
+This dataset contains 
+\f0\b plant
+\f1\b0  observations made in two time periods on Pikes Peak that meet the following criteria:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - Observed plant was identified to species level\
+- Plant species was observed in both the past and present\
+- At least 3 individuals of the plant species were observed in each time period\
+- In the present, the plant was observed between 2300 and 2900 meters of elevation\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Variables:\
+Poll_spec: The species name of the observed pollinator species \
+Poll_order: The name of the order the observed pollinator species belongs to\
+Julian_day: The Julian day (day of the year) that the pollinator was observed\
+Plant_spec: The species name of the plant the pollinator was observed on\
+Freq: The frequency of the observed plant-pollinator interaction\
+Period: The time period where an observation was made (2 levels: \'93Past\'94 and \'93Present\'94)\
+\
+3. Pres.csv\
+\
+This dataset contains all present observations before filtering for the criteria described above.\
+\
+Variables:\
+Poll_spec: The species name of the observed pollinator species \
+Poll_order: The name of the order the observed pollinator species belongs to\
+Julian_day: The Julian day (day of the year) that the pollinator was observed\
+Plant_spec: The species name of the plant the pollinator was observed on\
+Freq: The frequency of the observed plant-pollinator interaction\
+Ele_m: The elevation (in meters) where the observation was made\
+Lat: The latitude where and observation was made\
+Lon: The longitude where and observation was made\
+Period: The time period where an observation was made (1 level: \'93Present\'94)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Code:
+\f1\b0 \
+\
+1. REVISED_Zoller_et_al_AmNat_main.R\
+This script contains code for reproducing the analyses and figures presented in the manuscript.\
+\
+2. REVISED_Zoller_et_al_AmNat_supplement.R\
+This script contains code for reproducing the analyses and figures presented in the supplementary material.\
+\
+The authors recommend to first ruin the main file, followed by the supplement file.\
+\pard\pardeftab720\sa213\partightenfactor0
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\f1 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 R Session info:\
+\
+> sessionInfo()\
+R version 4.4.1 (2024-06-14)\
+Platform: aarch64-apple-darwin20\
+Running under: macOS 15.3.1\
+\
+Matrix products: default\
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib \
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0\
+\
+locale:\
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\
+\
+time zone: Europe/Zurich\
+tzcode source: internal\
+\
+attached base packages:\
+[1] grid      stats     graphics  grDevices utils     datasets  methods   base     \
+\
+other attached packages:\
+ [1] boot_1.3-30          fitdistrplus_1.2-1   survival_3.6-4       MASS_7.3-60.2       \
+ [5] lme4_1.1-35.5        Matrix_1.7-0         performance_0.13.0   pracma_2.4.4        \
+ [9] cowplot_1.1.3        zoo_1.8-12           gridGraphics_0.5-1   bipartite_2.20      \
+[13] sna_2.7-2            network_1.18.2       statnet.common_4.9.0 vegan_2.6-8         \
+[17] lattice_0.22-6       permute_0.9-7        reshape2_1.4.4       ggplot2_3.5.1       \
+[21] ggridges_0.5.6       tidyr_1.3.1          dplyr_1.1.4          data.table_1.16.0   \
+[25] readxl_1.4.3        \
+\
+loaded via a namespace (and not attached):\
+ [1] dotCall64_1.1-1   gtable_0.3.6      spam_2.10-0       insight_1.0.2     vctrs_0.6.5      \
+ [6] tools_4.4.1       generics_0.1.3    parallel_4.4.1    tibble_3.2.1      fansi_1.0.6      \
+[11] cluster_2.1.6     pkgconfig_2.0.3   lifecycle_1.0.4   farver_2.1.2      compiler_4.4.1   \
+[16] stringr_1.5.1     textshaping_0.4.0 fields_16.2       munsell_0.5.1     maps_3.4.2       \
+[21] pillar_1.9.0      nloptr_2.1.1      crayon_1.5.3      nlme_3.1-164      tidyselect_1.2.1 \
+[26] stringi_1.8.4     purrr_1.0.2       labeling_0.4.3    splines_4.4.1     colorspace_2.1-1 \
+[31] cli_3.6.3         magrittr_2.0.3    utf8_1.2.4        withr_3.0.2       scales_1.3.0     \
+[36] igraph_2.0.3      cellranger_1.1.0  ragg_1.3.3        coda_0.19-4.1     viridisLite_0.4.2\
+[41] mgcv_1.9-1        rlang_1.1.4       Rcpp_1.0.13-1     glue_1.8.0        rstudioapi_0.17.1\
+[46] minqa_1.2.8       R6_2.5.1          plyr_1.8.9        systemfonts_1.1.0\
+> \
+}
